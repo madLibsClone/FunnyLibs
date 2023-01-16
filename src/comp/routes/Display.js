@@ -1,9 +1,13 @@
+import { useLocation } from "react-router-dom";
+
 const Display = () => {
+    const location = useLocation();
+    
     return (
     
         <section>
             <p>
-                There's so many poorly words in that sentence. There's so many poorly chosen words in that sentence. Marry me. Bad news. Andy Griffith turned us down. He didn't like his trailer. I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense.
+                There's so many poorly words in that {location.state.nounOne}. There's so many poorly chosen words in that sentence. Marry me. Bad news. Andy Griffith turned us down. He didn't like his trailer. I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense.
             </p>
 
             <p>

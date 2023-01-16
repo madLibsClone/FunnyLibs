@@ -1,13 +1,8 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   
-  // const [nounOne, setNounOne] = useState('');
-  // const [nounTwo, setNounTwo] = useState('');
-  // const [adjOne, setAdjOne] = useState('');
-  // const [adjTwo, setAdjTwo] = useState('');
-  // const [verbOne, setVerbOne] = useState('');
   const [userInputs, setUserInputs] = useState({
     nounOne: '',
     nounTwo: '',
@@ -27,7 +22,9 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    navigate("/Display", )
+    navigate("/Display", {
+      state : userInputs
+    })
   }
 
   return(
