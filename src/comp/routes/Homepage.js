@@ -4,8 +4,10 @@ const Homepage = () => {
     return (
     
         <section>
-            <p>Instructions about what mad libs are go here I guess</p>
-            <Link to="/Form">Start</ Link>
+            <div >
+                <p>Instructions about what mad libs are go here I guess</p>
+                <Link to="/Form">Start</ Link>
+            </div>
         </section>
     )
 }
