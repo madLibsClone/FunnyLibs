@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MadLibOne from "./madlibs/MadLibOne";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   
@@ -12,7 +12,6 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(e)
   }
 
   return(
@@ -43,12 +42,8 @@ const Form = () => {
           <input type="text" value={verbOne}onChange={(e) => {setVerbOne(e.target.value)}}/>
         </label>
 
-        <button>Submit</button>
+        <button><Link to='/Display'>Submit</Link></button>
       </form>
-      <MadLibOne
-      nounOne = {nounOne}
-      nounTwo = {nounTwo}
-      />
 
     </div>
     
