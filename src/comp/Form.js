@@ -1,17 +1,33 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Form = () => {
   
-  const [nounOne, setNounOne] = useState('');
-  const [nounTwo, setNounTwo] = useState('');
-  const [adjOne, setAdjOne] = useState('');
-  const [adjTwo, setAdjTwo] = useState('');
-  const [verbOne, setVerbOne] = useState('');
+  // const [nounOne, setNounOne] = useState('');
+  // const [nounTwo, setNounTwo] = useState('');
+  // const [adjOne, setAdjOne] = useState('');
+  // const [adjTwo, setAdjTwo] = useState('');
+  // const [verbOne, setVerbOne] = useState('');
+  const [userInputs, setUserInputs] = useState({
+    nounOne: '',
+    nounTwo: '',
+    adjOne: '',
+    adjTwo: '', 
+    verbOne: ''
+  })
 
+  const navigate = useNavigate()
+
+  const handleChange = (e) => {
+    setUserInputs({
+      ...userInputs,
+      [e.target.name]: e.target.value
+    })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    navigate("/Display", )
   }
 
   return(
@@ -19,30 +35,60 @@ const Form = () => {
       <form action="text" onSubmit={handleSubmit}>
         <label htmlFor="">
           Noun
-          <input type="text" value={nounOne} onChange={(e) => {setNounOne(e.target.value)}}/>
+          <input
+            name="nounOne"
+            type="text"
+            value={userInputs.nounOne}
+            onChange={handleChange}
+            required
+          />
         </label>
 
         <label htmlFor="">
           Noun2
-          <input type="text" value={nounTwo} onChange={(e) => {setNounTwo(e.target.value)}}/>
+          <input
+            name="nounTwo"
+            type="text"
+            value={userInputs.nounTwo}
+            onChange={handleChange}
+            required
+          />
         </label>
 
         <label htmlFor="">
           Adj
-          <input type="text" value={adjOne} onChange={(e) => {setAdjOne(e.target.value)}}/>
+          <input
+            name="adjOne"
+            type="text"
+            value={userInputs.adjOne}
+            onChange={handleChange}
+            required
+          />
         </label>
 
         <label htmlFor="">
           Adj2
-          <input type="text" value={adjTwo} onChange={(e) => {setAdjTwo(e.target.value)}}/>
+          <input
+            name="adjTwo"
+            type="text"
+            value={userInputs.adjTwo}
+            onChange={handleChange}
+            required
+          />
         </label>
 
         <label htmlFor="">
           Verb
-          <input type="text" value={verbOne}onChange={(e) => {setVerbOne(e.target.value)}}/>
+          <input
+            name="verbOne"
+            type="text"
+            value={userInputs.verbOne}
+            onChange={handleChange}
+            required
+          />
         </label>
 
-        <button><Link to='/Display'>Submit</Link></button>
+        <button>Submit</button>
       </form>
 
     </div>
