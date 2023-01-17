@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Homepage = () => {
   
@@ -21,7 +21,7 @@ const Homepage = () => {
         <section>
             <div>
                 <p>Instructions about what mad libs are go here I guess</p>
-                <button onClick={randomizer}><Link to={madlibSelected}>Start</ Link></button>
+                <button className="button" onClick={randomizer}><Link to={madlibSelected}>Start</ Link></button>
             </div>
         </section>
     )
