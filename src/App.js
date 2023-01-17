@@ -3,9 +3,9 @@ import './css/Homepage.css'
 import './css/Form.css'
 import './css/Display.css'
 import { Routes, Route, Link } from 'react-router-dom';
-import Homepage from './comp/routes/Homepage';
-import Form from './comp/Form';
-import Display from "./comp/routes/Display.js";
+import Homepage from './comp/Homepage';
+import MadlibOne from './comp/routes/madlibBank/MadlibOne';
+import FormOne from './comp/routes/FormBank/FormOne';
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
         <main>
           <Routes>
             <Route path='/' element={<Homepage />} />
-            <Route path='/Form' element={<Form />} />
-            <Route path='/Display' element={<Display />} />
+            <Route path='/MadlibOne' element={<MadlibOne />} />
+            <Route path='/FormOne' element={<FormOne />}/>
           </Routes>
         </main>
       </div>
