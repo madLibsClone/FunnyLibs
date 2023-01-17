@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const FormOne = () => {
+const FormThree = () => {
   
   const [userInputs, setUserInputs] = useState({
     nounOne: '',
@@ -9,15 +9,14 @@ const FormOne = () => {
     nounThree: '',
     nounFour: '',
     nounFive: '',
+    nounSix: '',
     adjOne: '',
     adjTwo: '',
     adjThree: '',
     adjFour: '',
     adjFive: '',
-    adjSix: '',
-    adjSeven: '',
-    adjEight: '',
-    adjNine: ''
+    adjSix: ''
+  
   })
 
   const navigate = useNavigate()
@@ -31,7 +30,7 @@ const FormOne = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    navigate("/MadlibOne", {
+    navigate("/MadlibThree", {
       state : userInputs
     })
   }
@@ -104,6 +103,19 @@ const FormOne = () => {
             required
             placeholder="Noun"
             id="nounFive"
+          />
+
+          <label htmlFor="nounSix" className="sr-only">
+          Noun
+        </label>
+          <input
+            name="nounSix"
+            type="text"
+            value={userInputs.nounSix}
+            onChange={handleChange}
+            required
+            placeholder="Noun"
+            id="nounSix"
           />
           
 
@@ -185,45 +197,6 @@ const FormOne = () => {
             id="adjSix"
           />
 
-          <label htmlFor="adjSeven" className="sr-only">
-          Adj
-        </label>
-          <input
-            name="adjSeven"
-            type="text"
-            value={userInputs.adjSeven}
-            onChange={handleChange}
-            required
-            placeholder="Adjective"
-            id="adjSeven"
-          />
-
-          <label htmlFor="adjEight" className="sr-only">
-          Adj
-        </label>
-          <input
-            name="adjEight"
-            type="text"
-            value={userInputs.adjEight}
-            onChange={handleChange}
-            required
-            placeholder="Adjective"
-            id="adjEight"
-          />
-
-          <label htmlFor="adjNine" className="sr-only">
-          Adj
-        </label>
-          <input
-            name="adjNine"
-            type="text"
-            value={userInputs.adjNine}
-            onChange={handleChange}
-            required
-            placeholder="Adjective"
-            id="adjNine"
-          />
-
         <button className="button">Submit</button>
       </form>
 
@@ -232,4 +205,4 @@ const FormOne = () => {
   )
 }
 
-export default FormOne;
+export default FormThree;

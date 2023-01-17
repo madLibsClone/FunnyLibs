@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const FormOne = () => {
+const FormTwo = () => {
   
   const [userInputs, setUserInputs] = useState({
     nounOne: '',
@@ -17,7 +17,8 @@ const FormOne = () => {
     adjSix: '',
     adjSeven: '',
     adjEight: '',
-    adjNine: ''
+    adjNine: '',
+    adjTen: ''
   })
 
   const navigate = useNavigate()
@@ -31,7 +32,7 @@ const FormOne = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    navigate("/MadlibOne", {
+    navigate("/MadlibTwo", {
       state : userInputs
     })
   }
@@ -224,6 +225,19 @@ const FormOne = () => {
             id="adjNine"
           />
 
+          <label htmlFor="adjTen" className="sr-only">
+          Adj
+        </label>
+          <input
+            name="adjTen"
+            type="text"
+            value={userInputs.adjTen}
+            onChange={handleChange}
+            required
+            placeholder="Adjective"
+            id="adjTen"
+          />
+
         <button className="button">Submit</button>
       </form>
 
@@ -232,4 +246,4 @@ const FormOne = () => {
   )
 }
 
-export default FormOne;
+export default FormTwo;

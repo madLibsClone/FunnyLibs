@@ -9,7 +9,7 @@ const About = () => {
                         <img src="https://ca.slack-edge.com/T02E8L5NKFV-U044PJ67L2D-bba64a9b7cdd-512" alt="Tyler George" />
                     </div>
                     <div className="about-links">
-                        <p>Some text about cool guy Tyler</p>
+                        <p>A Bartender turned Web Developer, Tyler is based at the most eastern point of Canada, in St. Johns Newfoundland! He is super duper cool and worth checking out!</p>
                         <a className="button" href="https://github.com/tillerload">Github</a>
                         <a className="button" href="https://www.tylergeorge.ca/">Portfolio</a>
                     </div>
