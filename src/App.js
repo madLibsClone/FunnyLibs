@@ -1,34 +1,51 @@
+import './css/setup.css';
 import './App.css';
-import './css/Homepage.css'
-import './css/Form.css'
-import { Routes, Route } from 'react-router-dom';
-import Homepage from './comp/routes/Homepage';
-import Form from './comp/Form';
-import Display from "./comp/routes/Display.js";
+import './css/animations.css';
+import './css/Header.css';
+import './css/About.css';
+import './css/Form.css';
+import './css/mediaQueries.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import Homepage from './comp/Homepage';
+import MadlibOne from './comp/routes/madlibBank/MadlibOne';
+import MadlibTwo from './comp/routes/madlibBank/MadlibTwo';
+import MadlibThree from './comp/routes/madlibBank/MadlibThree';
+import FormOne from './comp/routes/FormBank/FormOne';
+import FormTwo from './comp/routes/FormBank/FormTwo';
+import FormThree from './comp/routes/FormBank/FormThree';
+import About from './comp/routes/About';
 
 function App() {
   return (
     <div className="App">
-      <div className="wrapper">
-        <header>
-          <h1>MadLibone</h1>
-          <nav>
+      <header>
+        <div className="header-flex wrapper">
+          <h1><Link to="/">FunnyLibs!</Link></h1>
+          <nav className="navigation">
             <ul>
-              <li>About Us</li>
-              <li>Placeholder</li>
+              <li><Link to="/About">About Us</Link></li>
             </ul>
           </nav>
-        </header>
+        </div>
+      </header>
+      <div className="wrapper">
         <main>
           <Routes>
             <Route path='/' element={<Homepage />} />
-            <Route path='/Form' element={<Form />} />
-            <Route path='/Display' element={<Display />} />
+            <Route path='/MadlibOne' element={<MadlibOne />} />
+            <Route path='/MadlibTwo' element={<MadlibTwo />} />
+            <Route path='/MadlibThree' element={<MadlibThree />} />
+            <Route path='/FormOne' element={<FormOne />}/>
+            <Route path='/FormTwo' element={<FormTwo/>} />
+            <Route path='/FormThree' element={<FormThree/>} />
+            <Route path='/About' element={<About />} />
           </Routes>
         </main>
       </div>
     </div>
+    
   );
+
 }
 
 export default App;

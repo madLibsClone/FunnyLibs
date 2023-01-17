@@ -1,0 +1,51 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.about ul {
+    display: flex;
+    width: 80%;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.about-profile {
+    border-radius: 40px;
+    flex-basis: 50%;
+    background: linear-gradient(to bottom, var(--color-primary) 45%, var(--color-white) 45%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+        rgba(0, 0, 0, 0.07) 0px 1px 2px, 
+        rgba(0, 0, 0, 0.07) 0px 2px 4px, 
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, 
+        rgba(0, 0, 0, 0.07) 0px 8px 16px, 
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+        rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    overflow: hidden;
+}
+
+.about-img {
+    width: 60%;
+}
+
+.about-img img {
+    border: 15px solid var(--color-white);
+    border-radius: 50%;
+}
+
+.about-links {
+    width: 100%;
+    padding: 0 5% 20px;
+}
+
+.about-links .button {
+    width: 40%;
+    margin: 0 10px;
+}
