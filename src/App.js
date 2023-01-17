@@ -1,7 +1,8 @@
 import './App.css';
 import './css/Homepage.css'
 import './css/Form.css'
-import { Routes, Route } from 'react-router-dom';
+import './css/Display.css'
+import { Routes, Route, Link } from 'react-router-dom';
 import Homepage from './comp/routes/Homepage';
 import Form from './comp/Form';
 import Display from "./comp/routes/Display.js";
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <header>
-          <h1>MadLibone</h1>
+          <h1><Link to="/">MadLibone</Link></h1>
           <nav>
             <ul>
               <li>About Us</li>
@@ -29,6 +30,7 @@ function App() {
       </div>
     </div>
   );
+
 }
 
 export default App;

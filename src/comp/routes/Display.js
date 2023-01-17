@@ -1,11 +1,13 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const Display = () => {
     const location = useLocation();
     
     return (
     
-        <section>
+        <section className="displaySection">
+            <h2>TONS OF LAUGHS AHEAD</h2>
+
             <p>
                 There's so many poorly words in that {location.state.nounOne}. There's so many poorly chosen words in that sentence. Marry me. Bad news. Andy Griffith turned us down. He didn't like his trailer. I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense.
             </p>
@@ -17,6 +19,8 @@ const Display = () => {
             <p>
                 Marry me. That's why you always leave a note! Steve Holt! Now, when you do this without getting punched in the chest, you'll have more fun. I've opened a door here that I regret. Oh, you're gonna be in a coma, all right.
             </p>
+
+            <button><Link to="/">HAHA</Link></button>
         </section>
     )
 }

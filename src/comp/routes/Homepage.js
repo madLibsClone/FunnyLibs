@@ -4,9 +4,9 @@ const Homepage = () => {
     return (
     
         <section>
-            <div >
+            <div>
                 <p>Instructions about what mad libs are go here I guess</p>
-                <Link to="/Form">Start</ Link>
+                <button><Link to="/Form">Start</ Link></button>
             </div>
         </section>
     )
