@@ -1,17 +1,7 @@
-h2 {
-  text-align: center;
-}
-
-p {
-  text-align: center;
-}
-
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px;
-
 }
 
 form input {
@@ -19,7 +9,6 @@ form input {
   padding: 5px;
 }
 
-form button {
-  margin-top: 5px;
-  padding: 5px 10px;
+form .button {
+  width: 60%;
 }

@@ -20,7 +20,7 @@ const Display = () => {
                 Marry me. That's why you always leave a note! Steve Holt! Now, when you do this without getting punched in the chest, you'll have more fun. I've opened a door here that I regret. Oh, you're gonna be in a coma, all right.
             </p>
 
-            <button><Link to="/">HAHA</Link></button>
+            <button className="button"><Link to="/">HAHA</Link></button>
         </section>
     )
 }

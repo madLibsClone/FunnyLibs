@@ -1,0 +1,26 @@
+header {
+    margin-top: 20px;
+    }
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+padding: 10px 20px;
+}
+
+.navigation {
+    padding: 20px;
+}
+
+.navigation ul {
+display: flex;
+list-style: none;
+}
+
+.navigation ul li {
+padding: 0 20px;
+}

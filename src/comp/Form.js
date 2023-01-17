@@ -28,7 +28,7 @@ const Form = () => {
   }
 
   return(
-    <div>
+    <section className="form-page">
       <h2>Please fill it out haha</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, illum doloribus quasi ea qui rem temporibus consectetur, saepe quos sequi ratione, quas explicabo in nihil laudantium exercitationem porro consequatur molestias.</p>
       <form action="text" onSubmit={handleSubmit}>
@@ -97,10 +97,10 @@ const Form = () => {
             id="verbOne"
           />
 
-        <button>Submit</button>
+        <button className="button">Submit</button>
       </form>
 
-    </div>
+    </section>
     
   )
 }
