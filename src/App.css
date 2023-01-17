@@ -1,9 +1,9 @@
 /* Global styles */
 :root {
-  --color-primary: #23a6d5;
-  --color-secondary: #e73c7e;
-  --color-tertiary: #ee7752;
-  --color-quaternary: #23d5ab;
+  --color-primary: #9EA1D4;
+  --color-secondary: #FD8A8A;
+  --color-tertiary: #F1F7B5;
+  --color-quaternary: #A8D1D1;
   --color-white: ivory;
   --color-black: black;
   --color-border-one: rgba(240, 46, 170, 0.4);
@@ -62,7 +62,7 @@ a:focus {
 .button {
   margin-top: 5px;
   padding: 10px;
-  width: 15%;
+  width: 30%;
   border: none;
   border-radius: 20px;
   background: var(--color-secondary);

@@ -4,6 +4,7 @@ import './css/animations.css';
 import './css/Header.css';
 import './css/About.css';
 import './css/Form.css';
+import './css/mediaQueries.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import Homepage from './comp/Homepage';
 import MadlibOne from './comp/routes/madlibBank/MadlibOne';
@@ -23,7 +24,6 @@ function App() {
           <nav className="navigation">
             <ul>
               <li><Link to="/About">About Us</Link></li>
-              {/* <li>Placeholder</li> */}
             </ul>
           </nav>
         </div>
