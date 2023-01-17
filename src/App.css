@@ -1,4 +1,18 @@
 /* Global styles */
+:root {
+  --color-primary: #23a6d5;
+  --color-secondary: #e73c7e;
+  --color-tertiary: #ee7752;
+  --color-quaternary: #23d5ab;
+  --color-white: ivory;
+  --color-black: black;
+  --color-border-one: rgba(240, 46, 170, 0.4);
+  --color-border-two: rgba(240, 46, 170, 0.3);
+  --color-border-three: rgba(240, 46, 170, 0.2);
+  --color-border-four: rgba(240, 46, 170, 0.1);
+  --color-border-five: rgba(240, 46, 170, 0.05);
+}
+
 
 html {
   font-size: 125%;
@@ -9,13 +23,34 @@ h1, h2, ul, li, input, button {
   margin: 0;
 }
 
+h2, h3 {
+  text-transform: uppercase;
+}
+
+li {
+  list-style-type: none;
+}
+
 p {
   margin: 20px;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  display: inline-block;
+  color: var(--color-black);
+  transition: all .3s;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+a:hover,
+a:focus {
+  color:var(--color-secondary);
 }
 
 .wrapper {
@@ -30,18 +65,18 @@ a {
   width: 15%;
   border: none;
   border-radius: 20px;
-  background: #e73c7e;
-  color: white;
+  background: var(--color-secondary);
+  color: var(--color-white);
   transition: all .3s;
 }
 
 .button a {
-  color: white;
+  color: var(--color-white);
 }
 
 .button:hover,
 .button:focus {
-  background: #23a6d5;
+  background: var(--color-primary);
 }
 
 section {
@@ -58,14 +93,14 @@ section {
 h1,
 section, 
 nav {
-  background-color: ivory;
+  background-color: var(--color-white);
   border-radius: 40px;
   box-shadow: 
-    rgba(240, 46, 170, 0.4) 5px 5px, 
-    rgba(240, 46, 170, 0.3) 10px 10px, 
-    rgba(240, 46, 170, 0.2) 15px 15px, 
-    rgba(240, 46, 170, 0.1) 20px 20px, 
-    rgba(240, 46, 170, 0.05) 25px 25px;
+    var(--color-border-one) 5px 5px, 
+    var(--color-border-two) 10px 10px, 
+    var(--color-border-three) 15px 15px, 
+    var(--color-border-four) 20px 20px, 
+    var(--color-border-five) 25px 25px;
 }
 
 
