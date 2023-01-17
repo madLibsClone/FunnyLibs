@@ -5,9 +5,9 @@ import './css/Header.css';
 import './css/About.css';
 import './css/Form.css';
 import { Routes, Route, Link } from 'react-router-dom';
-import Homepage from './comp/routes/Homepage';
-import Form from './comp/Form';
-import Display from "./comp/routes/Display.js";
+import Homepage from './comp/Homepage';
+import MadlibOne from './comp/routes/madlibBank/MadlibOne';
+import FormOne from './comp/routes/FormBank/FormOne';
 import About from './comp/routes/About';
 
 function App() {
@@ -28,8 +28,8 @@ function App() {
         <main>
           <Routes>
             <Route path='/' element={<Homepage />} />
-            <Route path='/Form' element={<Form />} />
-            <Route path='/Display' element={<Display />} />
+            <Route path='/MadlibOne' element={<MadlibOne />} />
+            <Route path='/FormOne' element={<FormOne />}/>
             <Route path='/About' element={<About />} />
           </Routes>
         </main>
