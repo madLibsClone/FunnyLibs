@@ -20,7 +20,7 @@ const Homepage = () => {
         <section>
             <div>
                 <p>Ever played Madlibs? Well if so its you're lucky day! FunnyLibs is literally just a Madlib Clone! All you have to do is enter a word that corresponds with what is present in the text field and BAM!! We generate a very funny and very epic story using those words!</p>
-                <button className="button" onClick={randomizer} className='button'><Link to={madlibSelected}>Start</ Link></button>
+                <button className="button" onClick={randomizer}><Link to={madlibSelected}>Start</ Link></button>
             </div>
         </section>
     )
