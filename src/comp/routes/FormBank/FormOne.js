@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import inputData from './inputData.js';
 
 const FormOne = () => {
   
@@ -19,6 +20,17 @@ const FormOne = () => {
     adjEight: '',
     adjNine: ''
   })
+  
+  // useEffect(() => {
+  //   inputData.forEach((input) => 
+  //     setUserInputs({
+  //       [input.name]: ''
+  //     })
+  //   )
+  // }, [])
+
+  // inputData.forEach((input) => 
+  //   console.log(input))
 
   const navigate = useNavigate()
 
@@ -39,15 +51,36 @@ const FormOne = () => {
   return(
     // 5 Nouns, 9 Adj
     <section className="form-page">
-      <h2>Please fill it out haha</h2>
-      <form action="text" onSubmit={handleSubmit}>
-        <label htmlFor="nounOne" className="sr-only">
+      <h2>Please fill out the fields below</h2>
+      <form onSubmit={handleSubmit}>
+        {
+          inputData.map((input) => 
+            <div key={input.name}>
+              <label
+                htmlFor={input.label}
+                className="sr-only"
+              >
+                {input.label}
+              </label>
+              <input
+                name={input.name}
+                type={input.type}
+                onChange={handleChange}
+                placeholder={input.label}
+                id={input.name}
+                //value
+                required
+              />
+            </div>
+          )
+        }
+        {/* <label htmlFor="nounOne" className="sr-only">
           Noun
         </label>
           <input
             name="nounOne"
             type="text"
-            value={userInputs.nounOne}
+            value={userInputs}
             onChange={handleChange}
             required
             placeholder="Noun"
@@ -222,7 +255,7 @@ const FormOne = () => {
             required
             placeholder="Adjective"
             id="adjNine"
-          />
+          /> */}
 
         <button className="button">Submit</button>
       </form>
