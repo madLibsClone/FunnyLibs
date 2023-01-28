@@ -1,28 +1,45 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import FormOne from "./routes/FormBank/FormOne";
+import FormTwo from "./routes/FormBank/FormTwo";
+import FormThree from "./routes/FormBank/FormThree";
 
 const Homepage = () => {
-  
-    const [madlibSelected, setMadlibSelected] = useState('')
+    
+    const [madlibIndex, setMadlibIndex] = useState(null)
 
     const madlibList = [
-        '/FormOne',
-        '/FormTwo',
-        '/FormThree'
+        <FormOne />,
+        <FormTwo />,
+        <FormThree />
       ]
         const randomizer = ()=> {
-            const madlibChoice = (madlibList[Math.floor(Math.random() * madlibList.length)]);
-            setMadlibSelected(madlibChoice)
+            const madlibChoice = (Math.floor(Math.random() * madlibList.length));
+            setMadlibIndex(madlibChoice)
         }
 
     return (
     
-        <section>
-            <div>
+        <>
+            <section>
+                <h2>What's this all about?</h2>
                 <p>Ever played Madlibs? Well if so its you're lucky day! FunnyLibs is literally just a Madlib Clone! All you have to do is enter a word that corresponds with what is present in the text field and BAM!! We generate a very funny and very epic story using those words!</p>
-                <button className="button" onClick={randomizer}><Link to={madlibSelected}>Start</ Link></button>
-            </div>
-        </section>
+                <button className="button" onClick={randomizer}>Start</button>
+                {
+                    madlibList.map((formComponent, i) => 
+                        <div 
+                            key={i}
+                            className={
+                                madlibIndex === i
+                                ? 'form-page'
+                                : 'form-page hidden'
+                            }
+                        >
+                            {formComponent}
+                        </div>
+                    )
+                }
+            </section>
+        </>
     )
 }
 export default Homepage;

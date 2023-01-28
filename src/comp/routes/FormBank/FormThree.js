@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const FormThree = () => {
+
+
   
   const [userInputs, setUserInputs] = useState({
     nounOne: '',
@@ -37,8 +39,8 @@ const FormThree = () => {
 
   return(
     // 5 Nouns, 9 Adj
-    <section className="form-page">
-      <h2>Please fill it out haha</h2>
+    <>
+      <h2>Please fill out the form</h2>
       <form action="text" onSubmit={handleSubmit}>
         <label htmlFor="nounOne" className="sr-only">
           Noun
@@ -199,8 +201,7 @@ const FormThree = () => {
 
         <button className="button">Submit</button>
       </form>
-
-    </section>
+    </>
     
   )
 }

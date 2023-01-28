@@ -39,8 +39,8 @@ const FormTwo = () => {
 
   return(
     // 5 Nouns, 9 Adj
-    <section className="form-page">
-      <h2>Please fill it out haha</h2>
+    <>
+      <h2>Please fill out the form</h2>
       <form action="text" onSubmit={handleSubmit}>
         <label htmlFor="nounOne" className="sr-only">
           Noun
@@ -240,8 +240,7 @@ const FormTwo = () => {
 
         <button className="button">Submit</button>
       </form>
-
-    </section>
+    </>
     
   )
 }

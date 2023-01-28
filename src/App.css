@@ -48,8 +48,7 @@ img {
   object-fit: cover;
 }
 
-a:hover,
-a:focus {
+a:is(:hover, :focus) {
   color:var(--color-secondary);
 }
 
@@ -60,6 +59,7 @@ a:focus {
 }
 
 .button {
+  text-transform: uppercase;
   margin-top: 5px;
   padding: 10px;
   width: 30%;
@@ -74,9 +74,9 @@ a:focus {
   color: var(--color-white);
 }
 
-.button:hover,
-.button:focus {
+.button:is(:hover, :focus) {
   background: var(--color-primary);
+  color: var(--color-white);
 }
 
 section {
