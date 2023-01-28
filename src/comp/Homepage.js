@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import FormOne from "./routes/FormBank/FormOne";
+import FormTwo from "./routes/FormBank/FormTwo";
+import FormThree from "./routes/FormBank/FormThree";
 
 const Homepage = () => {
-  
-    const [madlibSelected, setMadlibSelected] = useState('')
+    
+    const [madlibIndex, setMadlibIndex] = useState(null)
 
     const madlibList = [
         '/FormOne',
@@ -11,8 +13,8 @@ const Homepage = () => {
         '/FormThree'
       ]
         const randomizer = ()=> {
-            const madlibChoice = (madlibList[Math.floor(Math.random() * madlibList.length)]);
-            setMadlibSelected(madlibChoice)
+            const madlibChoice = (Math.floor(Math.random() * madlibList.length));
+            setMadlibIndex(madlibChoice)
         }
 
     return (
@@ -20,7 +22,11 @@ const Homepage = () => {
         <section>
             <div>
                 <p>Ever played Madlibs? Well if so its you're lucky day! FunnyLibs is literally just a Madlib Clone! All you have to do is enter a word that corresponds with what is present in the text field and BAM!! We generate a very funny and very epic story using those words!</p>
-                <button className="button" onClick={randomizer}><Link to={madlibSelected}>Start</ Link></button>
+                <button className="button" onClick={randomizer}>Woop!</button>
+                <FormOne madlibIndex={madlibIndex}/>
+                <FormTwo madlibIndex={madlibIndex}/>
+                <FormThree madlibIndex={madlibIndex}/>
+
             </div>
         </section>
     )

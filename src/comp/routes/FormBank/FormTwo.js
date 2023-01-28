@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const FormTwo = () => {
+const FormTwo = ({madlibIndex}) => {
   
   const [userInputs, setUserInputs] = useState({
     nounOne: '',
@@ -39,8 +39,12 @@ const FormTwo = () => {
 
   return(
     // 5 Nouns, 9 Adj
-    <section className="form-page">
-      <h2>Please fill it out haha</h2>
+    <section className={
+      madlibIndex===1
+      ?'form-page'
+      :'form-page hidden'
+    }>
+      <h2>Please fill it out haha 2</h2>
       <form action="text" onSubmit={handleSubmit}>
         <label htmlFor="nounOne" className="sr-only">
           Noun
